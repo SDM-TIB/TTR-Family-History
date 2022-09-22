@@ -37,8 +37,8 @@ def query_generation(input_data,endpoint):
 					"Relapse":"OPTIONAL {?ehr1 <http://clarify2020.eu/vocab/hasProgressionRelapse> ?Relapse.}.",
 					"Stages":"OPTIONAL {?ehr1 <http://clarify2020.eu/vocab/hasDiagnosis> ?o1 . \n ?o1 <http://clarify2020.eu/vocab/hasDiagnosisStage> ?Stages.}.",
 					"Tumor":"OPTIONAL {?ehr1 <http://clarify2020.eu/vocab/hasTumorHistology> ?Tumor.}.",
-					"FamilyDegree":"""?ehr1 <http://clarify2020.eu/vocab/hasFamilyHistory> ?o .\n ?o <http://clarify2020.eu/vocab/familyRelationDegree> ?familyType .\n ?o  <http://clarify2020.eu/vocab/hasFamilyCancerType> ?CancerType .""",
-					"FamilyRelationship":"""?ehr1 <http://clarify2020.eu/vocab/hasFamilyHistory> ?o .\n ?o <http://clarify2020.eu/vocab/familyType> ?familyType .\n ?o  <http://clarify2020.eu/vocab/hasFamilyCancerType> ?CancerType .""",}
+					"FamilyDegree":"""?ehr1 <http://clarify2020.eu/vocab/hasFamilyHistory> ?o .\n ?o <http://clarify2020.eu/vocab/familyRelationDegree> ?familyType .\n ?o  <http://clarify2020.eu/vocab/hasFamilyCancerType> ?CancerType . \n FILTER (?CancerType != <http://clarify2020.eu/entity/UNK>)""",
+					"FamilyRelationship":"""?ehr1 <http://clarify2020.eu/vocab/hasFamilyHistory> ?o .\n ?o <http://clarify2020.eu/vocab/familyType> ?familyType .\n ?o  <http://clarify2020.eu/vocab/hasFamilyCancerType> ?CancerType . \n FILTER (?CancerType != <http://clarify2020.eu/entity/UNK>)""",}
 	select_clause = {"Biomarker":"?Biomarker",
 					"Relapse":"?Relapse",
 					"Stages":"?Stages",

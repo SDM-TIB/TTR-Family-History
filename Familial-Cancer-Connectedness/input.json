@@ -1,1 +1,1 @@
-{"Input":{"IndependentVariables":{"Age":"50","Gender":"Female","SmokingHabits":"NonSmoker","FamilyType":"FamilyDegree","Metric":"FCCSet"},"DependentVariables":["Biomarker","CancerType"]}}
+{"Input":{"IndependentVariables":{"Age":"50","Gender":"Female","SmokingHabits":"NonSmoker","FamilyType":"FamilyRelationship","Metric":"FCCSet"},"DependentVariables":["Biomarker","CancerType"]}}
