@@ -85,6 +85,14 @@ SLCG:FamilyHistory	rdf:type	owl:Class;
 						dcterms:modified "2022-10-20"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.	
 
+SLCG:FamilyCancerType	rdf:type	owl:Class;
+						rdfs:label	"FamilyCancerType";
+						rdfs:subClassOf	SLCG:Concept;
+						rdfs:comment "Represents the cancers of relatives of the patient have suffered.";
+						dcterms:modified "2022-10-20"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.	
+
+
 SLCG:SmokingHistory	rdf:type	owl:Class;
 				rdfs:subClassOf SLCG:Concept;
 				rdfs:label	"Smoking";
