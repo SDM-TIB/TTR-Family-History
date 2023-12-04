@@ -247,7 +247,7 @@ TTR:previousCancerType	rdf:type	owl:DatatypeProperty;
 
 TTR:currentCancerType	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"currentCancerType";
-								rdfs:domain	TTR:CancerPatient;
+								rdfs:domain	TTR:PatientHistory;
 								rdfs:range	rdfs:Literal;
 								rdfs:comment "Represents the type of previous cancer from which the patient has suffered before.";
 								dcterms:modified "2022-10-20"^^xsd:date;							
