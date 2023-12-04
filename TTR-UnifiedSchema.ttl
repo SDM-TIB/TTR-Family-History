@@ -100,7 +100,12 @@ TTR:SmokingHistory	rdf:type	owl:Class;
 				dcterms:modified "2022-10-21"^^xsd:date;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.
 
-
+TTR:ProgressionRelapse	rdf:type	owl:Class;
+				rdfs:subClassOf TTR:Concept;
+				rdfs:label	"ProgressionRelapse";
+				rdfs:comment "Indicates the existance of progression OR relapse in the patient.";
+				dcterms:modified "2022-10-21"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.
 
 #################################################################################################################################################																																			
 #################################################################################################################################################
@@ -174,6 +179,13 @@ TTR:hasSmokingHistory   rdf:type     owl:ObjectProperty;
 							dcterms:modified "2022-10-21"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.	
 
+TTR:hasProgressionOrRelapse   rdf:type     owl:ObjectProperty;
+							rdfs:label	"hasProgressionOrRelapse";
+							rdfs:domain	TTR:CancerPatient;
+							rdfs:range	TTR:ProgressionRelapse;
+							rdfs:comment "Specifies that either of progression or relapse exists.";
+							dcterms:modified "2022-10-21"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.	
 
 #################################################################################################################################################
 #################################################################################################################################################
