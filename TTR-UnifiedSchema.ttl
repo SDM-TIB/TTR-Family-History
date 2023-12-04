@@ -117,7 +117,7 @@ TTR:ProgressionRelapse	rdf:type	owl:Class;
 
 TTR:hasAge	rdf:type	owl:ObjectProperty;
 				rdfs:label	"hasAge";
-				rdfs:domain	TTR:CancerPatient;
+				rdfs:domain	TTR:LCPatient;
 				rdfs:range	TTR:Age;
 				rdfs:comment	"Age value of the patient.";
 				dcterms:modified "2022-11-16"^^xsd:date;
@@ -125,7 +125,7 @@ TTR:hasAge	rdf:type	owl:ObjectProperty;
 
 TTR:gender	rdf:type	owl:ObjectProperty;
 				rdfs:label	"gender";
-				rdfs:domain	TTR:CancerPatient;
+				rdfs:domain	TTR:LCPatient;
 				rdfs:range	TTR:Gender;
 				rdfs:comment	"Gender value of the patient.";
 				dcterms:modified "2022-10-19"^^xsd:date;
@@ -133,7 +133,7 @@ TTR:gender	rdf:type	owl:ObjectProperty;
 
 TTR:hasRace	rdf:type	owl:ObjectProperty;
 				rdfs:label	"hasRace";
-				rdfs:domain	TTR:CancerPatient;
+				rdfs:domain	TTR:LCPatient;
 				rdfs:range	TTR:Race;
 				rdfs:comment	"Race value of the patient.";
 				dcterms:modified "2022-11-16"^^xsd:date;
@@ -141,7 +141,7 @@ TTR:hasRace	rdf:type	owl:ObjectProperty;
 
 TTR:hasBiomarkerObservation	rdf:type	owl:ObjectProperty;
 								rdfs:label	"hasBiomarkerObservation";
-								rdfs:domain	TTR:CancerPatient;
+								rdfs:domain	TTR:LCPatient;
 								rdfs:range	TTR:BiomarkerObservation;
 								rdfs:comment ".";
 								dcterms:modified "2022-10-19"^^xsd:date;								
@@ -157,7 +157,7 @@ TTR:hasBiomarker	rdf:type	owl:ObjectProperty;
 
 TTR:hasPatientHistory	rdf:type        owl:ObjectProperty;	
 							rdfs:label	"hasPatientHistory";
-							rdfs:domain	TTR:CancerPatient;
+							rdfs:domain	TTR:LCPatient;
 							rdfs:range	TTR:PatientHistory;
 							rdfs:comment "Connection between patient and her/his cancer history.";
 							dcterms:modified "2022-11-16"^^xsd:date;
@@ -165,7 +165,7 @@ TTR:hasPatientHistory	rdf:type        owl:ObjectProperty;
 
 TTR:hasFamilyHistory	rdf:type        owl:ObjectProperty;	
 							rdfs:label	"hasFamilyHistory";
-							rdfs:domain	TTR:CancerPatient;
+							rdfs:domain	TTR:LCPatient;
 							rdfs:range	TTR:FamilyHistory;
 							rdfs:comment "Connection between patient and her/his family history.";
 							dcterms:modified "2022-11-16"^^xsd:date;
@@ -173,7 +173,7 @@ TTR:hasFamilyHistory	rdf:type        owl:ObjectProperty;
 
 TTR:hasSmokingHistory   rdf:type     owl:ObjectProperty;
 							rdfs:label	"hasSmokingHistory";
-							rdfs:domain	TTR:CancerPatient;
+							rdfs:domain	TTR:LCPatient;
 							rdfs:range	TTR:SmokingHistory;
 							rdfs:comment "Relation between the patient and their smoking history.";
 							dcterms:modified "2022-10-21"^^xsd:date;
@@ -181,7 +181,7 @@ TTR:hasSmokingHistory   rdf:type     owl:ObjectProperty;
 
 TTR:hasProgressionOrRelapse   rdf:type     owl:ObjectProperty;
 							rdfs:label	"hasProgressionOrRelapse";
-							rdfs:domain	TTR:CancerPatient;
+							rdfs:domain	TTR:LCPatient;
 							rdfs:range	TTR:ProgressionRelapse;
 							rdfs:comment "Specifies that either of progression or relapse exists.";
 							dcterms:modified "2022-10-21"^^xsd:date;
