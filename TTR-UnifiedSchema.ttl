@@ -107,6 +107,12 @@ TTR:ProgressionRelapse	rdf:type	owl:Class;
 				dcterms:modified "2022-10-21"^^xsd:date;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.
 
+TTR:CancerType	rdf:type	owl:Class;
+				rdfs:subClassOf TTR:Concept;
+				rdfs:label	"CancerType";
+				rdfs:comment "Indicates the type of the cancer.";
+				dcterms:modified "2022-10-21"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.
 #################################################################################################################################################																																			
 #################################################################################################################################################
 #################################################################################################################################################
@@ -171,6 +177,30 @@ TTR:hasFamilyHistory	rdf:type        owl:ObjectProperty;
 							dcterms:modified "2022-11-16"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.
 
+TTR:hasFamilyCancerType	rdf:type        owl:ObjectProperty;	
+							rdfs:label	"hasFamilyCancerType";
+							rdfs:domain	TTR:LCPatient;
+							rdfs:range	TTR:CancerType;
+							rdfs:comment "Indicates the type of cancer of the relatives.";
+							dcterms:modified "2022-11-16"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.
+
+TTR:hasPreviousCancerType	rdf:type        owl:ObjectProperty;	
+							rdfs:label	"hasPreviousCancerType";
+							rdfs:domain	TTR:LCPatient;
+							rdfs:range	TTR:CancerType;
+							rdfs:comment "Indicates whicht type of previous cancer.";
+							dcterms:modified "2022-11-16"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.
+
+TTR:hasCurrentCancerType	rdf:type        owl:ObjectProperty;	
+							rdfs:label	"hasCurrentCancerType";
+							rdfs:domain	TTR:LCPatient;
+							rdfs:range	TTR:CancerType;
+							rdfs:comment "Indicates the cancer type of the patient.";
+							dcterms:modified "2022-11-16"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.
+
 TTR:hasSmokingHistory   rdf:type     owl:ObjectProperty;
 							rdfs:label	"hasSmokingHistory";
 							rdfs:domain	TTR:LCPatient;
@@ -232,7 +262,8 @@ TTR:biomarkerResult	rdf:type	owl:DatatypeProperty;
 
 TTR:previousCancerType	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"previousCancerType";
-								rdfs:domain	TTR:PatientHistory;
+								rdfs:domain	TTR:PatientHistory,
+										TTR:CancerType;
 								rdfs:range	rdfs:Literal;
 								rdfs:comment "Represents the type of previous cancer from which the patient has suffered before.";
 								dcterms:modified "2022-10-20"^^xsd:date;							
@@ -240,7 +271,8 @@ TTR:previousCancerType	rdf:type	owl:DatatypeProperty;
 
 TTR:currentCancerType	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"currentCancerType";
-								rdfs:domain	TTR:PatientHistory;
+								rdfs:domain	TTR:PatientHistory,
+										TTR:CancerType;
 								rdfs:range	rdfs:Literal;
 								rdfs:comment "Represents the type of previous cancer from which the patient has suffered before.";
 								dcterms:modified "2022-10-20"^^xsd:date;							
@@ -248,7 +280,8 @@ TTR:currentCancerType	rdf:type	owl:DatatypeProperty;
 
 TTR:numberOfFamilyWithLC	rdf:type	owl:DatatypeProperty;
 									rdfs:label	"numberOfFamilyWithLC";
-									rdfs:domain	TTR:FamilyHistory;
+									rdfs:domain	TTR:FamilyHistory,
+											TTR:CancerType;
 									rdfs:range	rdfs:Literal;
 									rdfs:comment "Represents the number of family members with lung cancer.";
 									dcterms:modified "2022-10-20"^^xsd:date;							
@@ -256,7 +289,8 @@ TTR:numberOfFamilyWithLC	rdf:type	owl:DatatypeProperty;
 
 TTR:numberOfFamilyWithOtherCancers	rdf:type	owl:DatatypeProperty;
 										rdfs:label	"numberOfFamilyWithOtherCancers";
-										rdfs:domain	TTR:FamilyHistory;
+										rdfs:domain	TTR:FamilyHistory,
+												TTR:CancerType;
 										rdfs:range	rdfs:Literal;
 										rdfs:comment "Represents the number of family members with cancers other than lung.";
 										dcterms:modified "2022-10-20"^^xsd:date;							
@@ -272,7 +306,8 @@ TTR:familyType	rdf:type	owl:DatatypeProperty;
 
 TTR:familyCancerType	rdf:type	owl:DatatypeProperty;
 									rdfs:label	"familyCancerType";
-									rdfs:domain	TTR:FamilyHistory;
+									rdfs:domain	TTR:FamilyHistory,
+											TTR:CancerType;
 									rdfs:range	rdfs:Literal;
 									rdfs:comment "Represents the type of the cancer that the family member had/ has (1=Breast, 2=Head and neck, 3=Germinal tumors, 4=Sarcoma, 5=Central nervous system, 6=Unknown origin carcinoma, 7=Colorrectal, 8=Esophagogastric, 9=Pancreatic, 10=Gall bladder, 11=Liver, 2=Melanoma, 13=Skin no melanoma, 14=Bladder/urinary tract, 15=Renal, 16=Prostate, 17=Uterus/cervical, 18=Lymphoma, 19=Leukemia, 20=Lung, 22=Ovarian, 888=Others, -1=- ).";
 									dcterms:modified "2022-10-20"^^xsd:date;							
@@ -280,7 +315,8 @@ TTR:familyCancerType	rdf:type	owl:DatatypeProperty;
 
 TTR:existenceOf_familyWithCancer	rdf:type	owl:DatatypeProperty;
 													rdfs:label	"existenceOf_familyWithCancer";
-													rdfs:domain	TTR:FamilyHistory;
+													rdfs:domain	TTR:FamilyHistory,
+															TTR:CancerType;
 													rdfs:range	rdfs:Literal;
 													rdfs:comment "";
 													dcterms:modified "2022-11-27"^^xsd:date;							
