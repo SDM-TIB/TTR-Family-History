@@ -229,13 +229,6 @@ TTR:biomarkerResult	rdf:type	owl:DatatypeProperty;
 							dcterms:modified "2022-10-19"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.	
 
-TTR:previousCancer	rdf:type	owl:DatatypeProperty;
-								rdfs:label	"previousCancer";
-								rdfs:domain	TTR:PatientHistory;
-								rdfs:range	rdfs:Literal;
-								rdfs:comment "Represents the previous cancer from which the patient has suffered before.";
-								dcterms:modified "2022-10-20"^^xsd:date;							
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.
 
 TTR:previousCancerType	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"previousCancerType";
@@ -287,19 +280,11 @@ TTR:familyCancerType	rdf:type	owl:DatatypeProperty;
 
 TTR:existenceOf_familyWithCancer	rdf:type	owl:DatatypeProperty;
 													rdfs:label	"existenceOf_familyWithCancer";
-													rdfs:domain	TTR:CancerPatient;
+													rdfs:domain	TTR:FamilyHistory;
 													rdfs:range	rdfs:Literal;
 													rdfs:comment "";
 													dcterms:modified "2022-11-27"^^xsd:date;							
 													dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.
-
-TTR:existenceOf_previousHistory	rdf:type	owl:DatatypeProperty;
-									rdfs:label	"existenceOf_previousHistory";
-									rdfs:domain	TTR:CancerPatient;
-									rdfs:range	rdfs:Literal;
-									rdfs:comment "";
-									dcterms:modified "2022-11-27"^^xsd:date;							
-									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/>.
 
 TTR:livingWithSmoker	rdf:type        owl:DatatypeProperty;	
 										rdfs:label	"livingWithSmoker";
