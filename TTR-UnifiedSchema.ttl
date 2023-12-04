@@ -197,7 +197,7 @@ TTR:hasProgressionOrRelapse   rdf:type     owl:ObjectProperty;
 
 TTR:age	rdf:type owl:DatatypeProperty;	
 				rdfs:label	"age";
-				rdfs:domain	TTR:CPatient;
+				rdfs:domain	TTR:LCPatient;
 				rdfs:range	rdfs:Literal;
 				rdfs:comment "Indicates the calculated age of the patient.";
 				dcterms:modified "2022-06-02"^^xsd:date;
